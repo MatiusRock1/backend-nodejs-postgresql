@@ -1,6 +1,6 @@
-const { password } = require('pg/lib/defaults');
+
 const {Model , DataTypes , Sequelize} = require ('sequelize');
-const sequelize = require('../../libs/sequelize');
+
 
 const USER_TABLE = 'users';
 

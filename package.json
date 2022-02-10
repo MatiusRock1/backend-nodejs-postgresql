@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "docker": "docker-compose up -d pgadmin && docker-compose up -d postgres ",
+    "docker": "docker-compose up -d pgadmin && docker-compose up -d postgres && docker-compose up -d mysql && docker-compose up -d phpmyadmin",
     "lint": "eslint"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "express": "^4.17.1",
     "faker": "^5.5.3",
     "joi": "^17.4.2",
+    "mysql2": "^2.3.3",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.16.1"
