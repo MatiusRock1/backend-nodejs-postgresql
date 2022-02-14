@@ -8,19 +8,27 @@ class CustomerService{
   }
 
   async find(){
-    const rta = await models.Customer.findAll();
+    const rta = await models.Customer.findAll({
+      include:['user']  //resuelve la relacion de forma anidada
+    });
     return rta;
   }
 
   async findOne(id){
-    const user = await models.Customer.findByPk(id);
+    const user = await models.Customer.findByPk(id,{
+      include:['user']  //resuelve la relacion de forma anidada
+    });
     if(!user){
       throw boom.notFound('customer not found');
     }
     return user;
   }
   async create(data){
-    const newCustomer = await models.Customer.create(data);
+    const newUser =await models.User.create(data.user);
+    const newCustomer = await models.Customer.create({
+      ...data,
+      userId: newUser.id
+    });
     return newCustomer;
   }
   async update(id,changes){
