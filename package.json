@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "docker": "docker-compose up -d pgadmin && docker-compose up -d postgres && docker-compose up -d mysql && docker-compose up -d phpmyadmin",
+    "docker": "docker-compose up -d pgadmin && docker-compose up -d postgres",
     "lint": "eslint",
     "migration:generate" : "sequelize-cli migration:generate --name",
     "migration:run" : "sequelize-cli db:migrate",
