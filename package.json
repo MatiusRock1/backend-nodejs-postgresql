@@ -24,6 +24,7 @@
     "prettier": "^2.3.2",
     "sequelize-cli": "^6.4.1"
   },
+
   "dependencies": {
     "@hapi/boom": "^9.1.4",
     "cors": "^2.8.5",
