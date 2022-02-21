@@ -8,10 +8,10 @@
     "start": "node index.js",
     "docker": "docker-compose up -d pgadmin && docker-compose up -d postgres",
     "lint": "eslint",
-    "migration:generate" : "sequelize-cli migration:generate --name",
-    "migration:run" : "sequelize-cli db:migrate",
-    "migration:revert" : "sequelize-cli db:migrate:undo",
-    "migration:delete" : "sequelize-cli db:migrate:undo:all"
+    "migration:generate": "sequelize-cli migration:generate --name",
+    "migration:run": "sequelize-cli db:migrate",
+    "migration:revert": "sequelize-cli db:migrate:undo",
+    "migration:delete": "sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
@@ -23,9 +23,9 @@
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2"
   },
-
   "dependencies": {
     "@hapi/boom": "^9.1.4",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
