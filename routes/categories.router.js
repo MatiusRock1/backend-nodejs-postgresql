@@ -44,6 +44,7 @@ passport.authenticate('jwt',{session:false}),
 );
 
 router.patch('/:id',
+passport.authenticate('jwt',{session:false}),
   validatorHandler(getCategorySchema, 'params'),
   validatorHandler(updateCategorySchema, 'body'),
   async (req, res, next) => {
@@ -59,6 +60,7 @@ router.patch('/:id',
 );
 
 router.delete('/:id',
+passport.authenticate('jwt',{session:false}),
   validatorHandler(getCategorySchema, 'params'),
   async (req, res, next) => {
     try {
