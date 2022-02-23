@@ -33,7 +33,7 @@ passport.authenticate('jwt',{session:false}),
 );
 
 router.post('/',
-passport.authenticate('jwt',{session:false}),
+/*passport.authenticate('jwt',{session:false}),*/
   validatorHandler(createCustomer, 'body'),
   async (req, res, next) => {
     try {
